@@ -35,12 +35,27 @@ enum SpecialType {
 	SizeST = 5
 };
 
-class Carta {
+class Card {
 public:
-	Carta();
-	~Carta();
 
-	void PrintCarta() const;
+	// Initializes a card with all variables set to their Empty equivalent
+	Card();
+
+	// Used to initialize a number card all other variables set to their Empty equivalent
+	Card(Color, int);
+
+	// Used to initialize a Plus card all other variables set to their Empty equivalent
+	Card(Color, PlusType);
+
+	// Used to initialize a Basic Type card all other variables set to their Empty equivalent
+	Card(Color, Type);
+
+	// Used to initialize a SpecialType card all other variables set to their Empty equivalent
+	Card(Color, SpecialType);
+
+	~Card();
+
+	void PrintCard() const;
 	
 	Color GetColor() const;
 	Type GetType() const;

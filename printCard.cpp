@@ -3,7 +3,7 @@
 const char* StringPlusType(PlusType pt) {
 	switch (pt) {
 	case EmptyPT:
-		return "Empty PT";
+		return "EmptyPT ";
 		break;
 	case OnePT:
 		return "Plus one";
@@ -18,10 +18,10 @@ const char* StringPlusType(PlusType pt) {
 		return "Plus twenty";
 		break;
 	case SizePT:
-		return "PT size Error";
+		return "PT size Error ";
 		break;
 	default:
-		return "Default Error PT";
+		return "Default Error PT ";
 		break;
 	}
 }
@@ -29,7 +29,7 @@ const char* StringPlusType(PlusType pt) {
 const char* StringColor(Color c) {
 	switch (c) {
 	case EmptyC:
-		return "Empty C";
+		return "EmptyC ";
 		break;
 	case Blue:
 		return "Blue ";
@@ -47,10 +47,10 @@ const char* StringColor(Color c) {
 		return "";
 		break;
 	case SizeC:
-		return "C Size Error";
+		return "C Size Error ";
 		break;
 	default:
-		return "Default Error C";
+		return "Default Error C ";
 		break;
 	}
 }
@@ -58,7 +58,7 @@ const char* StringColor(Color c) {
 const char* StringSpecial(SpecialType st) {
 	switch (st) {
 	case EmptyST:
-		return "Empty ST";
+		return "EmptyST ";
 		break;
 	case Joker:
 		return "Joker";
@@ -73,10 +73,10 @@ const char* StringSpecial(SpecialType st) {
 		return "Banishment Rune";
 		break;
 	case SizeST:
-		return "ST Size Error";
+		return "ST Size Error ";
 		break;
 	default:
-		return "Default Error ST";	
+		return "Default Error ST ";	
 		break;
 	}
 }
@@ -85,7 +85,7 @@ const char* StringType(Type t) {
 	switch (t)
 	{
 	case EmptyT:
-		return "Empty T";
+		return "EmptyT ";
 		break;
 	case Block:
 		return "block";
@@ -94,10 +94,10 @@ const char* StringType(Type t) {
 		return "reverse";
 		break;
 	case SizeT:
-		return "T Size Error";
+		return "T Size Error ";
 		break;
 	default:
-		return "Default Error T";
+		return "Default Error T ";
 		break;
 	}
 }
