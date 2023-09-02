@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="cards.cpp" />
     <ClCompile Include="deck.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="printCard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cards.hpp" />
     <ClInclude Include="deck.hpp" />
+    <ClInclude Include="game.hpp" />
     <ClInclude Include="printCard.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

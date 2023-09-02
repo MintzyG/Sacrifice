@@ -17,8 +17,17 @@ public:
 	// if more information is required please use PrintDeckDebug(); or PrintDeckRaw();
 	void PrintDeck() const;
 	
+	// Returns the amount of interactible cards inside the deck
+	int GetDeckSize() const;
+
+	// Returns the Card at position 'Index' from the deck
+	Card GetCard(int) const;
+
+	// Replaces a Card at position 'Index' in the Deck
+	void Setcard(Card, int);
+
 	~Deck();
 private:
-	std::vector<Card> deck;
-	int CardsInDeck;
+	std::vector<Card> m_Deck;
+	int m_CardsInDeck;
 };
