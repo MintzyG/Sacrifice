@@ -1,5 +1,5 @@
-#include "cards.hpp"
-#include "deck.hpp"
+#include "Cards/cards.hpp"
+#include "Deck/deck.hpp"
 
 enum GameModes {
 	Classic = 0,

@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)src/</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)src/</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -127,17 +133,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cards.cpp" />
-    <ClCompile Include="deck.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="printCard.cpp" />
+    <ClCompile Include="src\Cards\cards.cpp" />
+    <ClCompile Include="src\Deck\deck.cpp" />
+    <ClCompile Include="src\Game\game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Cards\printCard.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cards.hpp" />
-    <ClInclude Include="deck.hpp" />
-    <ClInclude Include="game.hpp" />
-    <ClInclude Include="printCard.hpp" />
+    <ClInclude Include="src\Cards\cards.hpp" />
+    <ClInclude Include="src\Deck\deck.hpp" />
+    <ClInclude Include="src\Game\game.hpp" />
+    <ClInclude Include="src\Cards\printCard.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

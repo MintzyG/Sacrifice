@@ -1,6 +1,6 @@
 #include <vector>
 #include <iostream>
-#include "cards.hpp"
+#include "Cards/cards.hpp"
 #include "deck.hpp"
 
 // Creates a deck with 'Amount' empty cards inside it if 'Fill' is true, otherwise
