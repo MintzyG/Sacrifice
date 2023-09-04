@@ -4,7 +4,7 @@
 #include "deck.hpp"
 
 // Creates a deck with 'Amount' empty cards inside it if 'Fill' is true, otherwise
-// it creates a deck with 'Amount' reserved, do 'Amount' = 0 and Fill = 0, just to have
+// it creates a deck with 'Amount' reserved, do 'Amount' = 0 and Fill = false, just to have
 // it act as a default constructor
 Deck::Deck(int Amount, bool Fill)
 	: m_CardsInDeck(Amount)
@@ -13,8 +13,7 @@ Deck::Deck(int Amount, bool Fill)
 	if (Fill)
 		for (size_t i = 0; i < Amount; i++)
 			m_Deck.push_back(card);
-	else
-		m_Deck.reserve(Amount);
+
 }
 
 Deck::Deck() 

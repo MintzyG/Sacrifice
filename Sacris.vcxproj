@@ -138,12 +138,14 @@
     <ClCompile Include="src\Game\game.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Cards\printCard.cpp" />
+    <ClCompile Include="src\Player\player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Cards\cards.hpp" />
     <ClInclude Include="src\Deck\deck.hpp" />
     <ClInclude Include="src\Game\game.hpp" />
     <ClInclude Include="src\Cards\printCard.hpp" />
+    <ClInclude Include="src\Player\player.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
