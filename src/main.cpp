@@ -3,7 +3,7 @@
 int main() {
 
 	Game game;
-	game.SetupClassic();
+	game.SetupGame();
 	game.PrintGameInfo();
 
 }

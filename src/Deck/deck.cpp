@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <cstdlib>
 #include "Cards/cards.hpp"
 #include "deck.hpp"
 
@@ -87,6 +88,20 @@ Card Deck::GetCard(int index) const {
 // Replaces a Card at position 'Index' in the Deck
 void Deck::Setcard(Card card, int index) {
 	m_Deck[index] = card;
+}
+
+// Takes a card and prints all cards that can be played on top of that card
+void Deck::PrintValidCards(Card card) const {
+
+}
+
+void Deck::ShuffleDeck() {
+	std::vector<Card> tmp;
+	tmp.reserve(m_CardsInDeck);
+
+	for (int i = m_CardsInDeck; i >= 0 ; i--) {
+
+	}
 }
 
 Deck::~Deck()

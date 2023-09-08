@@ -55,6 +55,7 @@ Game::Game(GameModes gm)
 
 // TODO: Implement empty game constructor
 
+// TODO: Reword Custom game constructor to just take an int
 // Initializes a Custom GameMode of Sacrifice with 'X' empty cards in the deck
 Game::Game(GameModes gm, int x)
 	: m_Mode(gm), m_Deathmatch(NoDeathmatch), m_PlayerAmount(0)
@@ -99,7 +100,7 @@ void Game::NamePlayers() {
 }
 
 // Creates a match of Sacrifice
-void Game::SetupClassic() {
+void Game::SetupGame() {
 
 	SetPlayerAmount();
 	CreatePlayers(m_PlayerAmount);

@@ -28,9 +28,9 @@ Deck Player::GetHand() const {
 	return m_Hand;
 }
 
+// TODO: Implement functionality of Player::PrintValid()
 // Prints all valid plays on the player's hand based on the last card played
-void Player::PrintValid() const {
-	// TODO: Implement functionality of Player::PrintValid()
+void Player::PrintValid(Card lastCard)const {
 }
 
 void Player::PrintPlayerName() const {

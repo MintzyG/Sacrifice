@@ -25,6 +25,13 @@ public:
 
 	// Replaces a Card at position 'Index' in the Deck
 	void Setcard(Card, int);
+	//TODO: Implement RemoveCard()
+	
+	void PrintValidCards(Card) const;
+
+	void ShuffleDeck();
+
+	//TODO: Implement DeckShuffling()
 
 	~Deck();
 private:

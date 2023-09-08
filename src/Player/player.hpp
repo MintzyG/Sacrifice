@@ -21,7 +21,7 @@ public:
 	Deck GetHand() const;
 
 	// Prints all valid plays on the player's hand based on the last card played
-	void PrintValid() const;
+	void PrintValid(Card) const;
 
 	void PrintPlayerName() const;
 

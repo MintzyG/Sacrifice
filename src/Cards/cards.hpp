@@ -59,7 +59,6 @@ public:
 	// If a completely empty card is provided it prints all its atributes to be easily distinguishable
 	void PrintCard() const;
 	
-	
 	// These below are basic getters and setter for all of the properties on a card
 
 	Color GetColor() const;

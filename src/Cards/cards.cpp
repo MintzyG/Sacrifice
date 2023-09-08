@@ -72,7 +72,7 @@ void Card::SetNumber(int number) {
 	m_Number = number;
 }
 
-//TODO: Implement PrintRaw() and PrintDebug()
+//TODO: Implement PrintCardRaw() and PrintCardDebug()
 // Prints the cards always color first, unless the card is a SpecialType, then it doesn't print colors
 // If a completely empty card is provided it prints all its atributes to be easily distinguishable
 void Card::PrintCard() const {

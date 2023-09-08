@@ -44,12 +44,15 @@ public:
 	// Ask for the user to input the names of all players
 	void NamePlayers();
 
-	// Creates a Classic match of Sacrifice
-	void SetupClassic();
+	// Creates a match of Sacrifice
+	void SetupGame();
 
 	void SetPlayerAmount();
 
 	~Game();
+
+	//TODO: Implement DealCard()
+	//TODO: FirstCard(), FirstPlay()
 
 private:
 	Deck m_Deck;
