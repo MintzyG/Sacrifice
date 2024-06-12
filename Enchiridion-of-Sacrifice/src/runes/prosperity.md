@@ -1,1 +1,1 @@
-# Prosperity Rune
+# Prosperity Rune(Inflação)

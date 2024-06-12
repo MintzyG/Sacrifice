@@ -1,0 +1,1 @@
+# Redirection Rune (Advogado)
