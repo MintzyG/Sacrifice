@@ -10,6 +10,8 @@ const config = {
   reactStrictMode: true,
   // Static HTML export, so the site can be hosted on GitHub Pages.
   output: 'export',
+  // Every page is exported as <path>/index.html, so URLs work with or without a trailing slash.
+  trailingSlash: true,
   basePath,
   images: { unoptimized: true },
 };
