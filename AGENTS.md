@@ -33,6 +33,14 @@ Changes from Uno de Corno that the old rulebook doesn't have:
   - **Bloody dagger:** you killed a player. Allows an **Early Sacrifice** on any of your turns except your Sacrifice turn: play the bloody dagger together with a card of the opening demon's colour, or purple for the God, as a normal play (the card must be valid). After it you can only win by killing, and you gain a bonus (bonuses still to be decided).
 - **Chain:** the chain of + plays (old "sequência de +"). Separate from the number Sequence.
 
+- **Runes** (decisions for the rune pages):
+  - Pages never mention old Uno de Corno names (keep them in AGENTS.md and TRANSLATIONS.md only).
+  - A rune can be played on top of anything, but some can't be played into a + Chain (others, like Shield, Prosperity and the new Fortune, can). Ask Sophia per rune when it's unclear.
+  - No card type labels. Instead, each rune page says what the rune generates in The Rite (an event, an effect, ...).
+  - Rune glyphs come from the physical cards; Sophia will provide images. Don't invent glyphs.
+  - The rune list in the Enchiridion and the old doc is partly wrong or missing. Ask before adding a rune.
+  - Every rune has a Tainted and a Transmutation version, but the old texts are outdated: always confirm each rune's rules with Sophia.
+
 ## Names
 
 Old names → Sacrifice names, beyond the rune names in the Enchiridion:
