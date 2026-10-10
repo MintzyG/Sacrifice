@@ -12,12 +12,14 @@ import {
 } from 'fumadocs-ui/components/dialog/search';
 import { useDocsSearch } from 'fumadocs-core/search/client';
 import { staticClient } from 'fumadocs-core/search/client/orama-static';
+import { useI18n } from 'fumadocs-ui/contexts/i18n';
+import { useMemo } from 'react';
 import { basePath } from '@/lib/shared';
 
-// The site is a static export, so search runs in the browser over a prebuilt index.
-const client = staticClient({ from: `${basePath}/api/search` });
-
 export default function StaticSearchDialog(props: SharedProps) {
+  const { locale } = useI18n();
+  // The site is a static export, so search runs in the browser over a prebuilt index.
+  const client = useMemo(() => staticClient({ from: `${basePath}/api/search`, locale }), [locale]);
   const { search, setSearch, query } = useDocsSearch({ client });
 
   return (

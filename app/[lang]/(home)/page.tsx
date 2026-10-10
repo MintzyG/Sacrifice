@@ -4,11 +4,29 @@ import type { Node } from 'fumadocs-core/page-tree';
 import { ArrowRight } from 'lucide-react';
 import { source } from '@/lib/source';
 import { docsRoute, gitConfig } from '@/lib/shared';
+import type { Lang } from '@/lib/i18n';
 
 const githubUrl = `https://github.com/${gitConfig.user}/${gitConfig.repo}`;
 
 // "Sacrifice" in Elder Futhark.
 const runeTitle = 'ᛋᚨᚲᚱᛁᚠᛁᚲᛖ';
+
+const text: Record<Lang, Record<'tagline' | 'read' | 'github' | 'contents' | 'license', string>> = {
+  en: {
+    tagline: 'The rules of the game.',
+    read: 'Read the rules',
+    github: 'View on GitHub',
+    contents: 'Contents',
+    license: 'Code under MIT, content under CC BY 4.0. © 2026 Sophia Hoffmann.',
+  },
+  'pt-br': {
+    tagline: 'As regras do jogo.',
+    read: 'Ler as regras',
+    github: 'Ver no GitHub',
+    contents: 'Conteúdo',
+    license: 'Código sob MIT, conteúdo sob CC BY 4.0. © 2026 Sophia Hoffmann.',
+  },
+};
 
 interface Section {
   name: ReactNode;
@@ -18,10 +36,10 @@ interface Section {
 }
 
 // The top-level entries of the manual's sidebar: pages, and folders that have a page to land on.
-function getSections(): Section[] {
+function getSections(lang: string): Section[] {
   const sections: Section[] = [];
-  for (const node of source.getPageTree().children) {
-    if (node.type === 'page' && node.url !== docsRoute) sections.push(node);
+  for (const node of source.getPageTree(lang).children) {
+    if (node.type === 'page' && node.url !== `/${lang}${docsRoute}`) sections.push(node);
     if (node.type === 'folder') {
       const url = node.index?.url ?? firstPageUrl(node.children);
       if (url) sections.push({ ...node, url });
@@ -40,8 +58,10 @@ function firstPageUrl(nodes: Node[]): string | undefined {
   }
 }
 
-export default function HomePage() {
-  const sections = getSections();
+export default async function HomePage({ params }: PageProps<'/[lang]'>) {
+  const { lang } = await params;
+  const t = text[lang as Lang] ?? text.en;
+  const sections = getSections(lang);
 
   return (
     <main className="flex-1">
@@ -55,13 +75,13 @@ export default function HomePage() {
             {runeTitle}
           </p>
           <h1 className="mb-5 font-display text-5xl font-semibold tracking-wide sm:text-7xl">Sacrifice</h1>
-          <p className="mx-auto mb-9 max-w-xl text-xl text-fd-muted-foreground">The rules of the game.</p>
+          <p className="mx-auto mb-9 max-w-xl text-xl text-fd-muted-foreground">{t.tagline}</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
-              href={docsRoute}
+              href={`/${lang}${docsRoute}`}
               className="inline-flex items-center gap-2 rounded-lg bg-fd-primary px-5 py-2.5 font-display text-sm font-semibold tracking-wide text-fd-primary-foreground transition-opacity hover:opacity-90"
             >
-              Read the rules
+              {t.read}
               <ArrowRight className="size-4" />
             </Link>
             <a
@@ -70,7 +90,7 @@ export default function HomePage() {
               rel="noreferrer"
               className="inline-flex items-center rounded-lg border bg-fd-card px-5 py-2.5 font-display text-sm font-semibold tracking-wide transition-colors hover:bg-fd-accent"
             >
-              View on GitHub
+              {t.github}
             </a>
           </div>
         </div>
@@ -79,7 +99,7 @@ export default function HomePage() {
       {sections.length > 0 && (
         <section className="mx-auto max-w-5xl px-4 py-16">
           <h2 className="mb-8 font-display text-sm font-semibold uppercase tracking-[0.2em] text-fd-primary">
-            Contents
+            {t.contents}
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {sections.map((section) => (
@@ -107,7 +127,7 @@ export default function HomePage() {
 
       <footer className="mt-auto border-t">
         <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-8 text-fd-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>Code under MIT, content under CC BY 4.0. © 2026 Sophia Hoffmann.</p>
+          <p>{t.license}</p>
           <a href={githubUrl} target="_blank" rel="noreferrer" className="hover:text-fd-primary">
             GitHub
           </a>

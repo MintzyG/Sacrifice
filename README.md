@@ -20,7 +20,8 @@ Run `just` to list them all.
 ```
 content/docs/
   meta.json     sidebar order
-  index.mdx     the manual's first page
+  index.mdx     the manual's first page (English)
+  index.pt-br.mdx  its Portuguese version; a missing one falls back to English
   ...           pages; subfolders get their own meta.json
 ```
 
