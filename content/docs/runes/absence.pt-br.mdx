@@ -1,0 +1,51 @@
+---
+title: Absence
+description: Mande um jogador para o mundo das sombras por 3 turnos.
+---
+
+## Efeito
+
+No seu turno, escolha um jogador, incluindo você mesmo. Ele fica **Absent** pelos próximos 3 turnos dele: ele está no mundo das sombras, fora do jogo. A escolha segue a [Regra da Escolha](../rules/choice-rule.mdx).
+
+Enquanto Absent, um jogador:
+
+- não pode ser alvo de nada,
+- não conta como jogador,
+- não pode ser obrigado a comprar, então não pode morrer por comprar, nem em uma [Deathmatch](../rules/deathmatches.mdx).
+
+Quando os 3 turnos acabam, ele volta e joga normalmente.
+
+<Callout title="Cuidado">
+Um jogador Absent não conta como jogador, nem para vencer. Com 3 jogadores, se um estiver Absent e outro morrer, só sobra um jogador, e ele vence.
+</Callout>
+
+## Escapando de uma Chain
+
+Quando uma [Chain](../rules/chains.mdx) chega em você, você pode jogar Absence em si mesmo para escapar dela. A Chain pula você.
+
+## The Rite
+
+<Rite
+  play="Absence é jogada, e um jogador é escolhido."
+  effect="O jogador escolhido fica Absent por 3 turnos."
+/>
+
+## Tainted
+
+O jogador escolhido fica Absent por 6 turnos.
+
+## Transmutation
+
+**Nightfall:** ninguém fica Absent. Em vez disso, você ganha um contador igual ao número de jogadores, incluindo você, mais 3. A cada turno seu, ele diminui em um. Se você ainda estiver vivo quando ele acabar, a noite cai: a partir daí, em cada turno seu, um jogador à sua escolha morre. Isso continua até você morrer, ou vencer.
+
+**Tainted e Transmutation juntas:** Nightfall, mas dois jogadores à sua escolha morrem em cada turno seu.
+
+## Exemplo
+
+<Callout title="Exemplo">
+São 5 jogadores, então o contador de Nightfall de P1 começa em 8.
+
+1. P1 joga Absence com Transmutation.
+2. Oito turnos de P1 depois, P1 ainda está vivo. A noite cai.
+3. A partir daí, em cada turno de P1, P1 escolhe um jogador, e ele morre.
+</Callout>

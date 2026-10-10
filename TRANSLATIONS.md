@@ -6,9 +6,14 @@ Names kept in English on the Portuguese pages for now. Pick Portuguese names lat
 
 | English | Old name (Uno de Corno) | Portuguese |
 |---|---|---|
+| Absence | Kage Yugami Sakki / No mundo das sombras | |
+| Ashen | Daltônico | |
+| Confusion | Idiota | |
 | Crushing | Incinerador | |
 | Transference | Deathmatch (card) | |
+| Displacement | Viagem Espacial | |
 | Draining | Ladrão | |
+| Echo | Espelho | |
 | Empowering | Capitalista | |
 | Famine | Comunista | |
 | Fortune | DLC | |
@@ -22,7 +27,7 @@ Names kept in English on the Portuguese pages for now. Pick Portuguese names lat
 | Protection | Escudo | |
 | Recollection | Irineu | |
 | Redirection | Advogado do Diabo | |
-| Restoration | Necromancer | |
+| Desecration | Necromancer | |
 | Soul Swap | Trocar de mãos | |
 | Reaper | Pau no Seu Cu | |
 | Stasis | Bloquear 48H | |
@@ -38,6 +43,9 @@ Names kept in English on the Portuguese pages for now. Pick Portuguese names lat
 | Servant | Proletariado | |
 | Starved | Comunista | |
 | Impotent | Racista | |
+| Confused | Idiota | |
+| Absent | | |
+| Colourblind | Daltônico | |
 | Tainted | Fudido / Fudida | |
 | Scapegoat | Advogado | |
 | Sinner | Cliente | |
@@ -63,7 +71,14 @@ Names kept in English on the Portuguese pages for now. Pick Portuguese names lat
 | God's Touch | |
 | Rationing | |
 | Gluttony | |
+| Greed | |
+| Indebted | |
 | Pestilence | |
+| Doomsday | |
+| Purified Soul | |
+| Singularity | |
+| Dirt | |
+| Nightfall | |
 | Target Block | |
 | Target +2 | |
 | Initiate Transmutation | |

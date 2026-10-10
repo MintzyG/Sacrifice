@@ -34,7 +34,7 @@ Changes from Uno de Corno that the old rulebook doesn't have:
 - **No black/white split for runes.** Every rune is purple. The old "Black / White Set" rule is legacy: it was never used in real games and is not ported.
 - **Demon deck.** 6 cards, one per colour; each colour is a demon (no names yet: write `[Red demon]` etc. as placeholders). The God has no card in it, so a game can never start on purple. To start, the chosen player draws a demon instead of searching the main deck for a number card; anyone except that player may make the first play on its colour, then that player's two neighbours race, and whoever plays a valid card first takes the play.
 
-- **No cuts.** Nothing is ever played out of turn to "cut" in. Exceptions: a Shattered Impermanence (from Protection's Transmutation) and an Ambush (purple Block's Transmutation) can be used out of turn.
+- **No cuts.** Nothing is ever played out of turn to "cut" in. Exceptions: Impermanence itself, a Shattered Impermanence (from Protection's Transmutation) and an Ambush (purple Block's Transmutation) can be used out of turn.
 - **Rainbow / Sequence** (replace the old Rainbow, Super Rainbow and Sequence):
   - Rainbow: the same card in all six colours: a number, Block, Reverse, +2, +4 or Choose Color. Action cards still take effect while building: several Blocks at once block that many next players, wrapping around (you can block yourself); several Reverses at once reverse only if their count is odd; +2/+4 Chain normally. Six purple Choose Colors in a row also make a Rainbow, whatever colours they chose: the only purple card that counts.
   - Sequence: six consecutive numbers, up or down, 0 counts (0-5 … 4-9).
@@ -51,6 +51,7 @@ Changes from Uno de Corno that the old rulebook doesn't have:
   - A Starved player can't postpone: they reveal, and win or die.
   - **Bloody dagger:** you killed a player. Allows an **Early Sacrifice** on any of your turns except your Sacrifice turn: play the bloody dagger together with a card of the opening demon's colour, or purple for the God, as a normal play (the card must be valid). After it you can only win by killing, and you gain a bonus (bonuses still to be decided).
 - **Lore:** purple cards are imbued by the God; their power is magic. A hand is a sorcerer's soul ("hand" in Uno de Corno = "soul" in Sacrifice), which is why effects stay on the hand. Miracle is bound to the sorcerer's essence, which is more than the soul, so it never moves with the hand.
+- **Greed:** drawing 20+ at once means discarding (tens digit − 1) runes from the cards just drawn: 20–29 → 1, 30–39 → 2… Any draw of 20+. Short on runes: discard from hand, then become Indebted (discard every rune you get until paid). Rules page `rules/greed`.
 - **Chain:** the chain of + plays (old "sequência de +"). Separate from the number Sequence. Any + card goes on any + card regardless of colour; you continue or draw the total. Rules page: `rules/chains`.
 - **Transmutation version** of a rune: play the rune together with the Transmutation rune.
 
@@ -59,17 +60,21 @@ Changes from Uno de Corno that the old rulebook doesn't have:
   - A rune can be played on top of anything, but some can't be played into a + Chain (others, like Shield, Prosperity and the new Fortune, can). Ask Sophia per rune when it's unclear.
   - No card type labels. Instead, each rune page says what the rune generates in The Rite (an event, an effect, ...).
   - Rune glyphs come from the physical cards; Sophia will provide images. Don't invent glyphs.
+  - Rune pages are ordered by power (weakest first), not by the old doc's order. Confusion depends on this order ("the next rune in the manual"), so reordering runes changes Confusion. Ask Sophia where each new rune goes in `runes/meta.json`.
   - The rune list in the Enchiridion and the old doc is partly wrong or missing. Ask before adding a rune.
+  - Every rune is written. New names: "Espelho" → Echo, "No mundo das sombras" → Absence, "Daltônico" → Ashen.
   - Every rune has a Tainted and a Transmutation version, but the old texts are outdated: always confirm each rune's rules with Sophia.
   - Rune status (internal, never shown in the manual): each rune's Transmutation is either **real** (designed) or a **placeholder**. Bare multipliers are placeholders.
 
     | Rune | Transmutation |
     |---|---|
     | Prosperity | placeholder (every Chain ×2 for the rest of the game; ×6 with Tainted) |
+    | Displacement | real (Singularity: two souls merge into one hand; what happens to one happens to both, wins included) |
     | Stasis | placeholder (everyone else blocked 3 turns; 6 with Tainted) |
     | Vision | placeholder (hand shown until death or the end of the game) |
     | Protection | real (Shattered Impermanence; two with Tainted) |
     | Fortune | placeholder (×3; ×6 with Tainted) |
+    | Ashen | placeholder (3 players; 6 with Tainted) |
     | Soul Swap | real (swap hands but not effects; same with Tainted) |
     | Time | real (restart: hands + draw pile redealt, used pile stays) |
     | Draining | placeholder (whole hand; two hands with Tainted) |
@@ -77,12 +82,19 @@ Changes from Uno de Corno that the old rulebook doesn't have:
     | Healing | real (any purple card of your choice; any two with Tainted) |
     | Recollection | real (use a purple card from your hand without spending it; two with Tainted) |
     | Pandemonium | real (hands become the draw pile, draw pile dealt out as hands) |
+    | Impermanence | real (duplicated: one used now, one kept; same with Tainted) |
+    | Crushing | real (destroy any 1 card anywhere; 2 with Tainted) |
     | Reaper | real (kill 3; 6 with Tainted). The one multiplier Transmutation that's real on purpose: a mega killer is fun |
+    | Purity | real (Purified Soul: no bad effect can be put on them anymore, but can never be revived; stays on the hand; two with Tainted) |
+    | Absence | real (Nightfall: counter of players + 3 of your turns, then a player of your choice dies each of your turns; two with Tainted) |
     | Miracle | placeholder (duplicated, keep both) |
+    | Confusion | real (each rune they play is random, decided by a die roll over the manual's runes when played) |
     | Impotence | real (allergic to magic: discard every purple card, now and later) |
     | Tainted | real (Pestilence: everyone gets the Tainted effects for the rest of the game) |
     | Famine | real (Rationing: every draw dealt out one card at a time around the table; halved with Tainted) |
     | Redirection | real, but rethink it (Super Scapegoat survives one deadly draw; two with Tainted) |
+    | Echo | placeholder (mirrored effect 2 more times) |
+    | Desecration | real (7 random graveyard cards become an extra hand you control, with its own dagger; two hands of 7 with Tainted) |
     | Transference | placeholder (hands move 3, 6 with Tainted; was Chaos Mode in Uno de Corno, no longer) |
 
 ## Names
@@ -98,6 +110,7 @@ Old names → Sacrifice names, beyond the rune names in the Enchiridion:
 | Modo Fudido | Pestilence (Tainted + Transmutation) |
 | Sepuku (Miracle + Tainted) | being Cleansed |
 | Pau no Seu Cu | Reaper (the Enchiridion called it Soul Taker) |
+| Necromancer | Desecration (the Enchiridion called it Restoration) |
 | Banho | Purity (removes the taint: Tainted becomes a common purple wild card) |
 | Advogado / Cliente (roles) | Scapegoat / Sinner (Redirection) |
 | Deathmatch type 1 (draw pile runs out) | The Drought (with "The") |
@@ -153,8 +166,6 @@ pnpm is the package manager.
 Old rules not ported yet, to place on their rune pages:
 
 - Stasis (Bloquear 48H) still works the same; its number of turns goes on its rune page.
-- Restoration (Necromancer) draws only 3 cards from the graveyard, not a whole hand. Crushing (Incinerador) discards 3.
-- Basic rules 15–17, Impermanence (Foda-se): it can't be played into someone's hand; it only returns a card to the hand if that card is a number or a victory; on a victory denial where the player gets no card back, they draw 7.
 
 ## Not ported
 
@@ -162,6 +173,7 @@ Old sections deliberately left out of the manual:
 
 - Black / White Set (legacy, never used in real games)
 - Giving Up (Desistência)
+- Runes dropped from Sacrifice: Black Lives Matter, Fuck You Gays, Perfeita
 - Sacrifice announcement with an animal, lying and challenges; the animal list; the old animal rituals of Early Sacrifice
 - Colourless Cards (Cartas sem cor): legacy, never used in real games
 - Discarding (Descartar): merged into the graveyard in the real game; discarded cards go to the graveyard
