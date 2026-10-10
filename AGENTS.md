@@ -66,6 +66,11 @@ fumadocs-studio.config.ts the live editor's config
 justfile                  commands
 ```
 
+## Writing pages
+
+- Link to other pages by file: `[Sacrifice](./sacrifice.mdx)` or `[The Wrath](./deathmatches.mdx#the-wrath)`, never a bare relative URL. Fumadocs turns file links into absolute URLs in the right language; bare relative URLs break, because the site uses trailing slashes.
+- Quote a frontmatter `description` that contains a colon.
+
 ## Commands
 
 Run `just` to list them. The main ones:
