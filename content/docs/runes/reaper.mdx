@@ -1,0 +1,50 @@
+---
+title: Reaper
+description: Kill a player, and take their hand.
+---
+
+## Effect
+
+Choose another living player. They die, and you take every card in their hand. If you play Reaper, you must kill someone. The choice follows the [Choice Rule](../rules/choice-rule.mdx).
+
+- Their effects don't pass to you (see [Effect Transfer](../rules/effect-transfer.mdx)).
+- If they're [Tainted](./tainted.mdx), Tainted comes to you with the rest of their cards.
+- If they hold [Miracle](./miracle.mdx), it stays with them, and revives them with a new hand.
+
+You can't choose yourself.
+
+Reaper can't be played into a [Chain](../rules/chains.mdx).
+
+## The Rite
+
+<Rite
+  play="Reaper is played, and a player is chosen."
+  effect="You take every card in the chosen player's hand."
+  death="The chosen player dies."
+/>
+
+## Gluttony
+
+A [Starved](./famine.mdx) Reaper commits **Gluttony**: taking the hand counts as drawing, so they die too. During [The Transference](../rules/deathmatches.mdx#the-transference), they don't.
+
+## Tainted
+
+Kill two players. You can choose the same player twice: if they hold Miracle, the second kill is for good.
+
+## Transmutation
+
+Kill three players.
+
+**Tainted and Transmutation together:** kill six players.
+
+## Deathmatches
+
+- **[The Drought](../rules/deathmatches.mdx#the-drought):** works normally.
+- **[The Transference](../rules/deathmatches.mdx#the-transference)** and **[The Wrath](../rules/deathmatches.mdx#the-wrath):** both you and the player you chose die.
+
+## Example
+
+<Callout title="Example">
+1. P1 plays Reaper on P3, who has 5 cards and is Starved.
+2. P3 dies. P1 takes their 5 cards, but P1 doesn't become Starved.
+</Callout>

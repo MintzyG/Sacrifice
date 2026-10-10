@@ -12,11 +12,29 @@ Changes from Uno de Corno that the old rulebook doesn't have:
 - **Runes are purple.** The old special cards are runes; purple sits outside the six colours, like black wild cards in Uno. Purple is the God's colour.
 - **+2, +4, Reverse and Block** keep their names. They exist in every colour, and in purple too. +4 no longer chooses a colour.
 - **Choose Color** only comes in purple.
-- **Purple Block variants:** besides the purple Block there are a purple **Double Block** and a purple **Target Block** (not described in the manual yet).
+- **Number cards:** 0–9, **Triquetra** and **Infinity**, in each of the six colours. Triquetra and Infinity are ordinary numbers, but can't be part of a Sequence. No card counts in the manual.
+- **Coloured action cards:** +2, +4, Reverse, Block, as in Uno. Colour doesn't matter inside a Chain. With 2 players, Reverse acts as a Block.
+- **Basic purple cards** (all wild: whoever plays one may choose a colour before the next player plays; once chosen, the next player must play that symbol, that colour, or purple; if they play first, the chance to choose is gone):
+
+  | Card | Base | Transmutation |
+  |---|---|---|
+  | Wild (= Choose Color) | choose a colour | Supreme Choose Color: see the next player's hand and choose exactly what they do, as if you were them |
+  | +1 | +1 | every other player draws 1 |
+  | +2 | +2 | Gift: instead of drawing, the next player gets 2 cards of your choice from your hand |
+  | +4 | +4 | Supreme +4 (old): next player discards 4 purple cards (ordinary ones if they lack purple) and loses their turn; fewer than 5 cards, they die |
+  | +20 | +20 | Hunt the leader: the +20 goes to the player with the fewest cards |
+  | Reverse | reverse | Reflection: the last effect played on you goes back to whoever played it (no reversing) |
+  | Block | block next player | Ambush: keep it face down as a trap; spring it any time, even out of turn, to block a player when their turn comes |
+  | Double Block | block next two players | blocks every other player once, so you play again |
+  | Target Block | block the chosen player when their turn comes | you take their turn |
+  | Target +2 | send +2 (or a whole Chain) to anyone; they can continue it | Curse: the chosen player draws 1 at the start of each of their next 3 turns |
+  | Initiate Transmutation | discard 4, draw 4 | discard any number, draw that many |
+
+  Tainted versions confirmed; all of this is on the Cards page (`rules/cards`).
 - **No black/white split for runes.** Every rune is purple. The old "Black / White Set" rule is legacy: it was never used in real games and is not ported.
 - **Demon deck.** 6 cards, one per colour; each colour is a demon (no names yet: write `[Red demon]` etc. as placeholders). The God has no card in it, so a game can never start on purple. To start, the chosen player draws a demon instead of searching the main deck for a number card; anyone except that player may make the first play on its colour, then that player's two neighbours race, and whoever plays a valid card first takes the play.
 
-- **No cuts.** Nothing is ever played out of turn to "cut" in. Exception: a Shattered Impermanence (from Protection's Transmutation) can be used out of turn.
+- **No cuts.** Nothing is ever played out of turn to "cut" in. Exceptions: a Shattered Impermanence (from Protection's Transmutation) and an Ambush (purple Block's Transmutation) can be used out of turn.
 - **Rainbow / Sequence** (replace the old Rainbow, Super Rainbow and Sequence):
   - Rainbow: the same card in all six colours: a number, Block, Reverse, +2, +4 or Choose Color. Action cards still take effect while building: several Blocks at once block that many next players, wrapping around (you can block yourself); several Reverses at once reverse only if their count is odd; +2/+4 Chain normally. Six purple Choose Colors in a row also make a Rainbow, whatever colours they chose: the only purple card that counts.
   - Sequence: six consecutive numbers, up or down, 0 counts (0-5 … 4-9).
@@ -32,6 +50,7 @@ Changes from Uno de Corno that the old rulebook doesn't have:
   - A purple pledge that fails kills you, unless your dagger is bloody (then it's a normal fail).
   - A Starved player can't postpone: they reveal, and win or die.
   - **Bloody dagger:** you killed a player. Allows an **Early Sacrifice** on any of your turns except your Sacrifice turn: play the bloody dagger together with a card of the opening demon's colour, or purple for the God, as a normal play (the card must be valid). After it you can only win by killing, and you gain a bonus (bonuses still to be decided).
+- **Lore:** purple cards are imbued by the God; their power is magic. A hand is a sorcerer's soul ("hand" in Uno de Corno = "soul" in Sacrifice), which is why effects stay on the hand. Miracle is bound to the sorcerer's essence, which is more than the soul, so it never moves with the hand.
 - **Chain:** the chain of + plays (old "sequência de +"). Separate from the number Sequence. Any + card goes on any + card regardless of colour; you continue or draw the total. Rules page: `rules/chains`.
 - **Transmutation version** of a rune: play the rune together with the Transmutation rune.
 
@@ -52,6 +71,19 @@ Changes from Uno de Corno that the old rulebook doesn't have:
     | Protection | real (Shattered Impermanence; two with Tainted) |
     | Fortune | placeholder (×3; ×6 with Tainted) |
     | Soul Swap | real (swap hands but not effects; same with Tainted) |
+    | Time | real (restart: hands + draw pile redealt, used pile stays) |
+    | Draining | placeholder (whole hand; two hands with Tainted) |
+    | Empowering | placeholder (3 Masters and 3 Servants; 6 and 6 with Tainted) |
+    | Healing | real (any purple card of your choice; any two with Tainted) |
+    | Recollection | real (use a purple card from your hand without spending it; two with Tainted) |
+    | Pandemonium | real (hands become the draw pile, draw pile dealt out as hands) |
+    | Reaper | real (kill 3; 6 with Tainted). The one multiplier Transmutation that's real on purpose: a mega killer is fun |
+    | Miracle | placeholder (duplicated, keep both) |
+    | Impotence | real (allergic to magic: discard every purple card, now and later) |
+    | Tainted | real (Pestilence: everyone gets the Tainted effects for the rest of the game) |
+    | Famine | real (Rationing: every draw dealt out one card at a time around the table; halved with Tainted) |
+    | Redirection | real, but rethink it (Super Scapegoat survives one deadly draw; two with Tainted) |
+    | Transference | placeholder (hands move 3, 6 with Tainted; was Chaos Mode in Uno de Corno, no longer) |
 
 ## Names
 
@@ -63,8 +95,14 @@ Old names → Sacrifice names, beyond the rune names in the Enchiridion:
 | Comunista (role) | Starved (Famine) |
 | Racista (role) | Impotent (Impotence) |
 | Fudido (role) | Tainted |
-| Deathmatch type 1 (draw pile runs out) | Drought |
-| Deathmatch type 2 (Deathmatch card) | Dominion |
+| Modo Fudido | Pestilence (Tainted + Transmutation) |
+| Sepuku (Miracle + Tainted) | being Cleansed |
+| Pau no Seu Cu | Reaper (the Enchiridion called it Soul Taker) |
+| Banho | Purity (removes the taint: Tainted becomes a common purple wild card) |
+| Advogado / Cliente (roles) | Scapegoat / Sinner (Redirection) |
+| Deathmatch type 1 (draw pile runs out) | The Drought (with "The") |
+| Deathmatch (the card) | Transference (rune; the Enchiridion called it Dominion) |
+| Deathmatch type 2 (Deathmatch card) | The Transference (with "The") |
 | Ordem de Progressão (OdP) | The Rite |
 | Rodada (per-hand count) | Turn: one play or action of a hand. Effect durations are in turns. |
 | Deathmatch type 3 (timer) | The Wrath (with "The"): the opening demon, stuck half-summoned, turns on the sorcerers |
@@ -114,12 +152,8 @@ pnpm is the package manager.
 
 Old rules not ported yet, to place on their rune pages:
 
-- Tainted players can choose not to draw in any Deathmatch (normalized; already on the Deathmatches page, repeat it on the Tainted rune page).
 - Stasis (Bloquear 48H) still works the same; its number of turns goes on its rune page.
-- Transmutation page: a purple Choose Color played with Transmutation is a **Supreme Choose Color**: you choose the next player's action. (Not part of Fortune.)
 - Restoration (Necromancer) draws only 3 cards from the graveyard, not a whole hand. Crushing (Incinerador) discards 3.
-- The Dominion rune (Deathmatch card) may get a better name.
-- Basic rule 13: having the Famine (Comunista), Impotence (Racista) or Empowering (Capitalista) effect twice cancels it.
 - Basic rules 15–17, Impermanence (Foda-se): it can't be played into someone's hand; it only returns a card to the hand if that card is a number or a victory; on a victory denial where the player gets no card back, they draw 7.
 
 ## Not ported

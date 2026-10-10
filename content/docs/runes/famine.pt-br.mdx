@@ -1,0 +1,52 @@
+---
+title: Famine
+description: Torne um jogador Starved. Ele não pode comprar, ou morre.
+---
+
+## Efeito
+
+Escolha um jogador vivo, incluindo você mesmo. Ele fica **Starved**: não pode mais comprar, e se comprar, morre. A escolha segue a [Regra da Escolha](../rules/choice-rule.mdx).
+
+Se o jogador escolhido já estiver Starved, ele passa fome: ele morre.
+
+Estar Starved fica na mão (veja [Transferência de Efeitos](../rules/effect-transfer.mdx)).
+
+Famine não pode ser jogada em uma [Chain](../rules/chains.mdx). Um jogador Starved que precisa comprar uma Chain compra, e depois morre.
+
+## The Rite
+
+<Rite
+  play="Famine é jogada, e um jogador é escolhido."
+  effect="O jogador escolhido fica Starved."
+  death="Se ele já estava Starved, ele morre."
+/>
+
+## Starved com outros papéis
+
+- **Servant:** um [Servant](./empowering.mdx) Starved compra do seu Master, e depois morre. O Master deixa de ter esse Servant.
+- **Master:** um Master Starved continua sendo Master. Ele não pode comprar, mas seus Servants continuam comprando dele.
+- **Tainted:** um jogador Starved que também está Tainted ainda pode escolher não comprar em qualquer [Deathmatch](../rules/deathmatches.mdx).
+- **Scapegoat:** um [Scapegoat](./redirection.mdx) Starved que compra pelo seu Sinner morre.
+
+## Tainted
+
+Escolha dois jogadores.
+
+## Transmutation
+
+O jogo fica sob **Rationing** pelo resto da partida. Toda compra é distribuída uma carta por vez: a primeira para o jogador que compra, a próxima para o jogador seguinte, e assim por diante na mesa, até as cartas acabarem.
+
+**Tainted e Transmutation juntas:** Rationing, mas toda compra é cortada pela metade, arredondando para cima, antes de ser distribuída. Uma compra de 3 vira 2.
+
+## Deathmatches
+
+- **[The Transference](../rules/deathmatches.mdx#the-transference):** jogadores Starved podem comprar sem morrer.
+
+## Exemplo
+
+<Callout title="Exemplo">
+O jogo está sob Rationing, com 5 jogadores.
+
+1. P2 precisa comprar 3.
+2. P2 pega a primeira carta, P3 a segunda, P4 a terceira. P5 e P1 não recebem nada.
+</Callout>

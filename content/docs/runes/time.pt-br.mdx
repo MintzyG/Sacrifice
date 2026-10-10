@@ -1,0 +1,48 @@
+---
+title: Time
+description: Desfaz os últimos 4 turnos.
+---
+
+## Efeito
+
+O jogo volta 4 [turnos](../rules/turns.mdx). Tudo que aconteceu em [The Rite](../rules/the-rite.mdx) durante esses turnos é desfeito: as cartas jogadas voltam para quem as jogou, e todo acontecimento, evento, efeito e morte é revertido. Depois, a jogada continua a partir do jogador seguinte a você.
+
+Time não pode ser jogada em uma [Chain](../rules/chains.mdx), só antes ou depois de uma.
+
+## The Rite
+
+<Rite
+  play="Time é jogada."
+  event="Os últimos 4 turnos são desfeitos."
+/>
+
+## Mortes revertidas
+
+Um jogador que tem a morte desfeita volta com uma mão nova, e não a antiga: 7 cartas, ou 1 carta durante qualquer [Deathmatch](../rules/deathmatches.mdx). As cartas vêm do baralho de compra, ou, se não houver mais baralho de compra, aleatoriamente da pilha de cartas usadas. A mão antiga fica onde estava.
+
+Receber cartas de volta por Time nunca mata ninguém, mesmo durante uma Deathmatch.
+
+## Tainted
+
+O jogo volta 8 turnos.
+
+## Transmutation
+
+O jogo reinicia. As cartas já jogadas continuam na pilha de cartas usadas. As mãos de todos os jogadores e o baralho de compra são juntados e distribuídos de novo: 7 cartas para cada um, uma por vez, dando a volta na mesa. Se não houver cartas suficientes, distribua até acabarem. Quem joga primeiro é quem era o próximo depois da última carta jogada.
+
+**Tainted e Transmutation juntas:** o jogo reinicia, do mesmo jeito.
+
+## Exceções
+
+- **No começo do jogo:** se Time for jogada dentro dos 4 primeiros turnos da partida, o jogo reinicia.
+- **[Ave Maria](../rules/hail-mary.mdx):** Time pode ser jogada como sua Ave Maria, desfazendo a vitória do jogador anterior.
+
+## Exemplo
+
+<Callout title="Exemplo">
+1. P1 joga um 3 vermelho.
+2. P2 joga Reaper em P4, matando-o.
+3. P3 joga um 7 vermelho.
+4. P4 está morto, então a jogada segue: P1 joga um Bloquear vermelho, e P2 fica bloqueado.
+5. P3 joga Time. Os últimos 4 turnos são desfeitos: o Bloquear vermelho, o 7 vermelho e o Reaper voltam para seus jogadores, P2 não está mais bloqueado, e P4 volta com 7 cartas novas. A jogada continua a partir de P4.
+</Callout>

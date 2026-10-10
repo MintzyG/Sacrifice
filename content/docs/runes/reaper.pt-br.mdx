@@ -1,0 +1,50 @@
+---
+title: Reaper
+description: Mate um jogador, e pegue a mão dele.
+---
+
+## Efeito
+
+Escolha outro jogador vivo. Ele morre, e você pega todas as cartas da mão dele. Se você jogar Reaper, precisa matar alguém. A escolha segue a [Regra da Escolha](../rules/choice-rule.mdx).
+
+- Os efeitos dele não passam para você (veja [Transferência de Efeitos](../rules/effect-transfer.mdx)).
+- Se ele estiver [Tainted](./tainted.mdx), Tainted vem para você junto com o resto das cartas.
+- Se ele tiver [Miracle](./miracle.mdx), ela fica com ele, e o revive com uma mão nova.
+
+Você não pode escolher a si mesmo.
+
+Reaper não pode ser jogada em uma [Chain](../rules/chains.mdx).
+
+## The Rite
+
+<Rite
+  play="Reaper é jogada, e um jogador é escolhido."
+  effect="Você pega todas as cartas da mão do jogador escolhido."
+  death="O jogador escolhido morre."
+/>
+
+## Gluttony
+
+Um Reaper [Starved](./famine.mdx) comete **Gluttony**: pegar a mão conta como comprar, então ele morre também. Durante [The Transference](../rules/deathmatches.mdx#the-transference), ele não morre.
+
+## Tainted
+
+Mate dois jogadores. Você pode escolher o mesmo jogador duas vezes: se ele tiver Miracle, a segunda morte é para sempre.
+
+## Transmutation
+
+Mate três jogadores.
+
+**Tainted e Transmutation juntas:** mate seis jogadores.
+
+## Deathmatches
+
+- **[The Drought](../rules/deathmatches.mdx#the-drought):** funciona normalmente.
+- **[The Transference](../rules/deathmatches.mdx#the-transference)** e **[The Wrath](../rules/deathmatches.mdx#the-wrath):** você e o jogador escolhido morrem.
+
+## Exemplo
+
+<Callout title="Exemplo">
+1. P1 joga Reaper em P3, que tem 5 cartas e está Starved.
+2. P3 morre. P1 pega as 5 cartas dele, mas P1 não fica Starved.
+</Callout>

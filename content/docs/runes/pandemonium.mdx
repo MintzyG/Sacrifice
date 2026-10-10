@@ -1,0 +1,55 @@
+---
+title: Pandemonium
+description: Shuffle every hand together and deal them out again.
+---
+
+## Effect
+
+Every player's hand goes into one pile, which is shuffled. Then the player who played Pandemonium deals it out, one card at a time, starting with the next player in turn order, until the pile runs out.
+
+- **Dead players are dealt in too.** They come back alive with the cards they get.
+- **Every effect is removed**, from every hand: roles like Master, Servant, Starved, Scapegoat and Sinner, blocks from Stasis, and so on (see [Effect Transfer](../rules/effect-transfer.mdx)).
+- **Miracle** isn't shuffled in. It stays with its owner.
+- **Tainted** is shuffled in, like any other card.
+
+Pandemonium can't be played into a [Chain](../rules/chains.mdx).
+
+## The Rite
+
+<Rite
+  play="Pandemonium is played."
+  event="Every hand is shuffled together and dealt out again. Every effect is removed."
+  death="During some Deathmatches, players die (see below)."
+/>
+
+## Tainted
+
+No change.
+
+## Transmutation
+
+The hands swap places with the draw pile: every player's hand becomes the new draw pile, and the old draw pile is dealt out as the new hands, one card at a time until it runs out.
+
+**Tainted and Transmutation together:** the same.
+
+## Deathmatches
+
+- **[The Drought](../rules/deathmatches.mdx#the-drought):** nothing special. But the Transmutation version kills everyone.
+- **[The Transference](../rules/deathmatches.mdx#the-transference):** everyone dies except Starved players, who get the cards.
+- **[The Wrath](../rules/deathmatches.mdx#the-wrath):** everyone dies.
+
+A player who dies from Pandemonium isn't dealt any cards.
+
+## Exceptions
+
+- **[Time](./time.mdx):** if Time undoes Pandemonium, the hands are shuffled and dealt out again.
+
+## Example
+
+<Callout title="Example">
+P1 has 2 cards and is Starved. P2 has 9, including Pandemonium. P3 is dead.
+
+1. P2 plays Pandemonium.
+2. P2 has 8 cards left. The 10 cards are shuffled, and P2 deals them starting with P3: P3, P1, P2, P3, P1, P2…
+3. P3 is alive again. P1 is no longer Starved. Everyone has 3 or 4 cards.
+</Callout>

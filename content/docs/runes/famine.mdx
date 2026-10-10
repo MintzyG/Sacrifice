@@ -1,0 +1,52 @@
+---
+title: Famine
+description: Make a player Starved. They can't draw, or they die.
+---
+
+## Effect
+
+Choose a living player, yourself included. They become **Starved**: they can no longer draw, and if they draw, they die. The choice follows the [Choice Rule](../rules/choice-rule.mdx).
+
+If the chosen player is already Starved, they starve: they die.
+
+Being Starved stays on the hand (see [Effect Transfer](../rules/effect-transfer.mdx)).
+
+Famine can't be played into a [Chain](../rules/chains.mdx). A Starved player who has to draw a Chain draws it, then dies.
+
+## The Rite
+
+<Rite
+  play="Famine is played, and a player is chosen."
+  effect="The chosen player becomes Starved."
+  death="If they were already Starved, they die."
+/>
+
+## Starved with other roles
+
+- **Servant:** a Starved [Servant](./empowering.mdx) draws from their Master, then dies. The Master no longer has that Servant.
+- **Master:** a Starved Master is still a Master. They can't draw, but their Servants still draw from them.
+- **Tainted:** a Starved player who is also Tainted can still choose not to draw in any [Deathmatch](../rules/deathmatches.mdx).
+- **Scapegoat:** a Starved [Scapegoat](./redirection.mdx) who draws for their Sinner dies.
+
+## Tainted
+
+Choose two players.
+
+## Transmutation
+
+The game is under **Rationing** for the rest of the game. Every draw is dealt out one card at a time: the first card to the player who draws, the next to the player after them, and so on around the table, until the cards run out.
+
+**Tainted and Transmutation together:** Rationing, but every draw is halved, rounding up, before it's dealt out. A draw of 3 becomes 2.
+
+## Deathmatches
+
+- **[The Transference](../rules/deathmatches.mdx#the-transference):** Starved players can draw without dying.
+
+## Example
+
+<Callout title="Example">
+The game is under Rationing, with 5 players.
+
+1. P2 has to draw 3.
+2. P2 takes the first card, P3 the second, P4 the third. P5 and P1 get nothing.
+</Callout>
