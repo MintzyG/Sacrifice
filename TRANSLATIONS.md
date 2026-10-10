@@ -11,17 +11,22 @@ Names kept in English on the Portuguese pages for now. Pick Portuguese names lat
 | Draining | Ladrão | |
 | Empowering | Capitalista | |
 | Famine | Comunista | |
+| Fortune | DLC | |
 | Healing | Heroes Never Die | |
 | Impermanence | Foda-se | |
 | Impotence | Racista | |
 | Miracle | Reviver | |
 | Pandemonium | Shufflecaust | |
+| Prosperity | Inflação | |
+| Protection | Escudo | |
 | Recollection | Irineu | |
 | Restoration | Necromancer | |
 | Soul Swap | Trocar de mãos | |
 | Soul Taker | Pau no Seu Cu | |
 | Stasis | Bloquear 48H | |
 | Time | Back to the Future | |
+| Transmutation | Suprema | |
+| Vision | Raio-X | |
 
 ## Roles
 
@@ -31,7 +36,7 @@ Names kept in English on the Portuguese pages for now. Pick Portuguese names lat
 | Servant | Proletariado | |
 | Starved | Comunista | |
 | Impotent | Racista | |
-| Tainted | Fudido | |
+| Tainted | Fudido / Fudida | |
 
 ## Deathmatches
 
@@ -47,6 +52,9 @@ Names kept in English on the Portuguese pages for now. Pick Portuguese names lat
 |---|---|
 | Deathmatch | |
 | Chain (+ chain) | |
+| Double Block | |
+| Shattered Impermanence | |
+| Target Block | |
 | Sacrificial Dagger | |
 | Bloody Dagger | |
 | Early Sacrifice | |

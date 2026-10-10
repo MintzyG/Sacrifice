@@ -1,0 +1,55 @@
+---
+title: Stasis
+description: Bloqueia o próximo jogador por 2 turnos, a não ser que ele passe adiante.
+---
+
+## Efeito
+
+Quando Stasis é jogada, o próximo jogador escolhe:
+
+- **Aceitar:** ele fica bloqueado por 2 turnos.
+- **Passar adiante:** ele joga um Bloquear, e o próximo jogador enfrenta a mesma escolha, com 1 turno a mais.
+
+Isso continua até um jogador não poder, ou não querer, passar adiante. Esse jogador fica bloqueado pelo total.
+
+Qualquer Bloquear pode passar adiante: um Bloquear colorido, um Bloquear roxo, um Bloquear Duplo roxo ou um Bloquear Alvo roxo.
+
+Stasis não pode ser jogada em uma [Chain](../rules/chains.mdx).
+
+## The Rite
+
+<Rite
+  play="Stasis é jogada."
+  effect="O próximo jogador fica bloqueado por 2 turnos, ou passa adiante com um Bloquear, até alguém ficar bloqueado."
+/>
+
+## Enquanto bloqueado
+
+- O turno em que você aceita o bloqueio não conta. Seus turnos bloqueados começam depois dele.
+- Você não pode ser bloqueado de novo. Um Bloquear jogado em você bloqueia o próximo jogador.
+- Uma carta de + direcionada a você pula você: ela vai para o jogador depois de você, e você fica com um turno bloqueado a menos.
+- Você ainda pode ser escolhido como alvo, por exemplo por **Soul Taker** ou **Draining**.
+- O bloqueio fica na mão (veja [Transferência de Efeitos](../rules/effect-transfer.mdx)). Se alguém trocar de mão com você, ele fica bloqueado pelos turnos que restavam, e você não.
+
+## Tainted
+
+O bloqueio começa em 4 turnos. Um Bloquear que passa adiante soma 1 turno, ou 2 se quem o jogar estiver Tainted.
+
+## Transmutation
+
+Todos os jogadores, menos você, ficam bloqueados por 3 turnos.
+
+**Tainted e Transmutation juntas:** todos os jogadores, menos você, ficam bloqueados por 6 turnos.
+
+## Exemplos
+
+<Callout title="Exemplo">
+1. P1 joga Stasis.
+2. P2 aceita e fica bloqueado por 2 turnos.
+</Callout>
+
+<Callout title="Exemplo">
+1. P1 joga Stasis.
+2. P2 joga um Bloquear, passando adiante.
+3. P3 aceita e fica bloqueado por 3 turnos.
+</Callout>
