@@ -1,0 +1,74 @@
+/*
+ * Sacrifice theme: runes cut into slate.
+ * Slate gray surfaces, wine red for structure, blood red for what matters.
+ */
+@import 'fumadocs-ui/css/lib/default-colors.css';
+
+@theme {
+  --color-fd-background: #e4e7eb;
+  --color-fd-foreground: #1c2128;
+  --color-fd-muted: #d8dce1;
+  --color-fd-muted-foreground: #525b66;
+  --color-fd-popover: #eceef1;
+  --color-fd-popover-foreground: #1c2128;
+  --color-fd-card: #dadee3;
+  --color-fd-card-foreground: #1c2128;
+  --color-fd-border: #bcc3cb;
+  --color-fd-primary: #7a1f2e;
+  --color-fd-primary-foreground: #eceef1;
+  --color-fd-secondary: #d0d5db;
+  --color-fd-secondary-foreground: #1c2128;
+  --color-fd-accent: #d9cdd0;
+  --color-fd-accent-foreground: #7a1f2e;
+  --color-fd-ring: #a4161a;
+  --color-fd-overlay: rgba(28, 33, 40, 0.25);
+
+  /* Theme-only colors, usable as Tailwind classes (text-wine, bg-blood, ...). */
+  --color-wine: #7a1f2e;
+  --color-blood: #a4161a;
+
+  --font-sans: var(--font-body), ui-serif, Georgia, serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-display: var(--font-heading), ui-serif, Georgia, serif;
+  --font-runic: var(--font-runes), serif;
+}
+
+.dark {
+  --color-fd-background: #111418;
+  --color-fd-foreground: #d5dae0;
+  --color-fd-muted: #1b2026;
+  --color-fd-muted-foreground: #8b95a1;
+  --color-fd-popover: #161a1f;
+  --color-fd-popover-foreground: #d5dae0;
+  --color-fd-card: #171b21;
+  --color-fd-card-foreground: #d5dae0;
+  --color-fd-border: #2b323b;
+  --color-fd-primary: #e5534b;
+  --color-fd-primary-foreground: #111418;
+  --color-fd-secondary: #1f252c;
+  --color-fd-secondary-foreground: #d5dae0;
+  --color-fd-accent: rgba(122, 31, 46, 0.3);
+  --color-fd-accent-foreground: #f08a84;
+  --color-fd-ring: #e5534b;
+  --color-fd-overlay: rgba(0, 0, 0, 0.55);
+
+  --color-wine: #9b3045;
+  --color-blood: #e5534b;
+}
+
+/* Headings in Cinzel, like letters carved into stone. */
+.prose :is(h1, h2, h3, h4),
+h1 {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+/* Wine-red rule under section headings. */
+.prose h2 {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-wine) 45%, transparent);
+  padding-bottom: 0.35em;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-blood) 30%, transparent);
+}

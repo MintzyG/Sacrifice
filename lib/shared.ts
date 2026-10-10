@@ -1,0 +1,30 @@
+import { createGetUrl } from 'fumadocs-core/source';
+
+export const appName = 'Sacrifice';
+// Prefix for URLs that Next.js doesn't rewrite itself (fetches, metadata); empty locally.
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+export const docsRoute = '/docs';
+export const docsImageRoute = '/og/docs';
+export const docsContentRoute = '/llms.mdx/docs';
+
+export const gitConfig = {
+  user: 'MintzyG',
+  repo: 'Sacrifice',
+  branch: 'main',
+};
+
+const getContentUrl = createGetUrl(docsContentRoute);
+
+export function getPageMarkdownUrl(page: { slugs: string[]; locale?: string }) {
+  const segments = [...page.slugs, 'content.md'];
+
+  return { segments, url: getContentUrl(segments, page.locale) };
+}
+
+const getImageUrl = createGetUrl(docsImageRoute);
+
+export function getPageImageUrl(page: { slugs: string[]; locale?: string }) {
+  const segments = [...page.slugs, 'image.png'];
+
+  return { segments, url: getImageUrl(segments, page.locale) };
+}
