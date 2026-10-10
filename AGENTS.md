@@ -8,6 +8,7 @@ Sacrifice is the successor of **Uno de Corno**, a house-rules Uno variant. The r
 
 Changes from Uno de Corno that the old rulebook doesn't have:
 
+- **Players:** at least 4 to start a game. (Rules like "with 2 players, Reverse acts as a Block" still matter, since players die.)
 - **Six colours:** red, yellow, green, blue, black and white.
 - **Runes are purple.** The old special cards are runes; purple sits outside the six colours, like black wild cards in Uno. Purple is the God's colour.
 - **+2, +4, Reverse and Block** keep their names. They exist in every colour, and in purple too. +4 no longer chooses a colour.
