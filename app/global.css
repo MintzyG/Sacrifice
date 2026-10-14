@@ -11,75 +11,132 @@ html > body[data-scroll-locked] {
   --removed-body-scroll-bar-size: 0px !important;
 }
 
-/* The rune stone on the home page. */
-.rune-orbit {
+/* The summoning circle on the home page: drawn in once, then the runes turn slowly. */
+.circle-ink {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: circle-draw 1.4s cubic-bezier(0.6, 0, 0.3, 1) forwards;
+  animation-delay: calc(var(--i) * 0.35s);
+}
+
+.circle-reveal {
+  opacity: 0;
+  animation: circle-fade 1.2s ease-out forwards;
+  animation-delay: calc(0.6s + var(--i) * 0.35s);
+}
+
+.circle-turn,
+.circle-turn-back {
   transform-box: view-box;
-  transform-origin: 200px 200px;
-  animation: rune-orbit 90s linear infinite;
+  transform-origin: 300px 300px;
 }
 
-.rune-orbit-glyph {
-  font-size: 22px;
-  fill: #e5484d;
-  animation: rune-flicker 4.2s ease-in-out infinite;
+.circle-turn {
+  animation:
+    circle-fade 1.2s ease-out 1.3s forwards,
+    circle-spin 240s linear infinite;
 }
 
-.rune-center {
+.circle-turn-back {
+  animation:
+    circle-fade 1.2s ease-out 2.35s forwards,
+    circle-spin 160s linear infinite reverse;
+}
+
+.circle-candle {
+  opacity: 0;
+  animation: circle-fade 0.5s ease-out forwards;
+  animation-delay: calc(2.4s + var(--i) * 0.15s);
+}
+
+.circle-dagger {
+  opacity: 0;
+  animation: circle-fade 1s ease-out 3.2s forwards;
+}
+
+.circle-drop {
+  opacity: 0;
   transform-box: fill-box;
-  transform-origin: center;
-  animation: rune-in 0.9s ease-out both;
+  transform-origin: top center;
+  animation: circle-drip 7s ease-in 4.2s infinite;
 }
 
-.rune-center-glow {
-  animation: rune-pulse 3.2s ease-in-out infinite;
-}
-
-@keyframes rune-orbit {
+@keyframes circle-draw {
   to {
-    transform: rotate(360deg);
+    stroke-dashoffset: 0;
   }
 }
 
-@keyframes rune-flicker {
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 0.85;
+@keyframes circle-fade {
+  to {
+    opacity: 1;
   }
 }
 
-@keyframes rune-in {
-  from {
+@keyframes circle-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* The drop swells at the point, falls into the circle and is gone. */
+@keyframes circle-drip {
+  0% {
     opacity: 0;
-    transform: scale(0.85);
+    transform: translateY(-6px) scale(0.2);
   }
-  to {
+  30% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
-}
-
-@keyframes rune-pulse {
-  0%,
+  45% {
+    opacity: 1;
+    transform: translateY(0) scale(1.05, 1.15);
+  }
+  62% {
+    opacity: 0.9;
+    transform: translateY(80px) scale(0.9, 1.2);
+  }
+  64%,
   100% {
-    opacity: 0.85;
-  }
-  50% {
-    opacity: 1;
+    opacity: 0;
+    transform: translateY(84px) scale(0.6);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rune-orbit,
-  .rune-orbit-glyph,
-  .rune-center,
-  .rune-center-glow {
+  .circle-ink,
+  .circle-reveal,
+  .circle-turn,
+  .circle-turn-back,
+  .circle-candle,
+  .circle-dagger {
     animation: none;
+    opacity: 1;
+    stroke-dashoffset: 0;
   }
 
-  .rune-orbit-glyph {
-    opacity: 0.6;
+  .circle-drop {
+    animation: none;
+    opacity: 1;
   }
+}
+
+/* Slate grain behind the home page hero. */
+.slate-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.38 0 0 0 0 0.42 0 0 0 0.14 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* The title, cut into the stone: a dark lip above, a lit edge below. */
+.carved {
+  text-shadow:
+    0 -1px 0 rgb(0 0 0 / 0.35),
+    0 1px 0 rgb(255 255 255 / 0.35);
+}
+
+.dark .carved {
+  text-shadow:
+    0 -1px 0 rgb(0 0 0 / 0.8),
+    0 1px 0 rgb(255 255 255 / 0.08),
+    0 0 40px color-mix(in srgb, var(--color-blood) 25%, transparent);
 }

@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { docsRoute, gitConfig } from '@/lib/shared';
-import { RuneStone } from '@/components/rune-stone';
+import { SummoningCircle } from '@/components/summoning-circle';
 import type { Lang } from '@/lib/i18n';
 
 const githubUrl = `https://github.com/${gitConfig.user}/${gitConfig.repo}`;
@@ -30,42 +29,43 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
 
   return (
     <main className="flex flex-1 flex-col">
-      <section className="relative flex flex-1 flex-col items-center overflow-hidden px-4 pt-12 pb-20 text-center sm:pt-16">
+      <section className="slate-grain relative isolate flex flex-1 items-center overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute top-10 left-1/2 size-[28rem] max-w-full -translate-x-1/2 rounded-full bg-wine/25 blur-3xl"
+          className="pointer-events-none absolute top-1/2 left-1/2 -z-10 size-[min(150vw,1100px)] -translate-x-1/2 -translate-y-[62%] rounded-full bg-[radial-gradient(closest-side,color-mix(in_srgb,var(--color-blood)_22%,transparent),transparent)] lg:left-[calc(50%+1rem+min(380px,50svh-3.5rem))] lg:-translate-y-1/2"
         />
-        <div className="relative">
-          <RuneStone />
-        </div>
+        <SummoningCircle className="pointer-events-none absolute top-6 left-1/2 -z-10 w-[min(118vw,560px)] -translate-x-1/2 text-wine opacity-60 lg:top-1/2 lg:left-[calc(50%+1rem)] lg:w-[min(760px,calc(100svh-7rem))] lg:translate-x-0 lg:-translate-y-1/2 lg:opacity-100 dark:text-blood" />
 
-        <p aria-hidden className="relative mt-8 mb-3 font-runic text-xl tracking-[0.4em] text-blood">
-          {runeTitle}
-        </p>
-        <h1 className="relative mb-4 font-display text-5xl font-semibold tracking-wide sm:text-7xl">Sacrifice</h1>
-        <p className="relative mx-auto max-w-xl text-xl text-fd-muted-foreground">{t.tagline}</p>
+        <div className="mx-auto w-full max-w-6xl px-4 pt-[calc(min(118vw,560px)+0.5rem)] pb-16 lg:py-32">
+          <div className="max-w-xl">
+            <p aria-hidden className="mb-4 font-runic text-lg tracking-[0.5em] text-blood">
+              {runeTitle}
+            </p>
+            <h1 className="carved font-display text-6xl leading-none font-bold sm:text-8xl">Sacrifice</h1>
+            <p className="mt-6 text-2xl text-fd-muted-foreground italic">{t.tagline}</p>
 
-        <div className="relative mt-16 flex flex-wrap justify-center gap-3">
-          <Link
-            href={`/${lang}${docsRoute}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-fd-primary px-5 py-2.5 font-display text-sm font-semibold tracking-wide text-fd-primary-foreground transition-opacity hover:opacity-90"
-          >
-            {t.read}
-            <ArrowRight className="size-4" />
-          </Link>
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center rounded-lg border bg-fd-card px-5 py-2.5 font-display text-sm font-semibold tracking-wide transition-colors hover:bg-fd-accent"
-          >
-            {t.github}
-          </a>
+            <div className="mt-12 flex flex-wrap gap-3">
+              <Link
+                href={`/${lang}${docsRoute}`}
+                className="inline-flex items-center rounded-sm bg-blood px-6 py-3 font-display text-sm font-bold tracking-widest text-[#eceef1] shadow-[inset_0_-2px_0_rgb(0_0_0/0.25)] transition-colors hover:bg-wine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blood"
+              >
+                {t.read}
+              </Link>
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-sm border border-fd-foreground/25 px-6 py-3 font-display text-sm font-bold tracking-widest transition-colors hover:border-blood hover:text-blood focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blood"
+              >
+                {t.github}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
       <footer className="border-t">
-        <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-8 text-fd-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-fd-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>{t.license}</p>
           <a href={githubUrl} target="_blank" rel="noreferrer" className="hover:text-fd-primary">
             GitHub
