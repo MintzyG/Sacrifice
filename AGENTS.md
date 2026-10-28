@@ -4,7 +4,7 @@
 
 ## Game context
 
-Sacrifice is the successor of **Uno de Corno**, a house-rules Uno variant. The rules are almost the same; mostly names changed. The old rulebook (Portuguese) is the source we port from, one page at a time. `MintzyG/Enchiridion-of-Sacrifice` (an earlier, unfinished mdBook) maps the old card names to the new rune names.
+Sacrifice is the successor of **Uno de Corno**, a house-rules Uno variant. The rules are almost the same; mostly names changed. The old rulebook (Portuguese) is the source we port from, one page at a time. `TRANSLATIONS.md` maps the old card names to the new rune names. Earlier attempts to implement the game in code live in `graveyard/`.
 
 Changes from Uno de Corno that the old rulebook doesn't have:
 
@@ -100,7 +100,7 @@ Changes from Uno de Corno that the old rulebook doesn't have:
 
 ## Names
 
-Old names → Sacrifice names, beyond the rune names in the Enchiridion:
+Old names → Sacrifice names, beyond the rune names in `TRANSLATIONS.md`:
 
 | Old | Sacrifice |
 |---|---|
